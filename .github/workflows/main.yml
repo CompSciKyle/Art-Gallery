@@ -30,6 +30,9 @@ jobs:
       - name: List build folder contents
         run: ls -la build
 
+      - name: Configure Git HTTP post buffer
+        run: git config --global http.postBuffer 524288000
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
