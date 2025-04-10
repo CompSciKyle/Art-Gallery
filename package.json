@@ -16,5 +16,9 @@
   },
   "devDependencies": {
     "@types/woocommerce__woocommerce-rest-api": "^1.0.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "rm -rf build && cp -r public build"
   }
 }
