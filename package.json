@@ -19,6 +19,6 @@
   },
 "scripts": {
   "start": "node server.js",
-  "build": "rm -rf build && mkdir -p build/public && cp index.html build/ && cp -r public/* build/public"
+  "build": "rm -rf build && mkdir -p build/public && cp index.html build/ && cp -r public/* build/public && rm -f build/public/models/scene.gltf"
  }
 }
