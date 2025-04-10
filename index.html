@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 3D Scene</title>
+    <link rel="stylesheet" type="text/css" href="/public/src/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { margin: 0; }
+    </style>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "/node_modules/three/build/three.module.js",
+                "three/examples/jsm/": "/node_modules/three/examples/jsm/",
+                "@woocommerce/woocommerce-rest-api": "https://esm.sh/@woocommerce/woocommerce-rest-api@1.0.1",
+                "oauth-1.0a": "https://esm.sh/oauth-1.0a@2.2.6",
+                "axios": "https://esm.sh/axios@1.6.2"
+              
+            }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-container">
+            <!-- Art gallery name -->
+            <h1 class="gallery-name">SYNDICATE</h1>
+
+            <!-- Centered icon -->
+            <div class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+                </svg>
+            </div>
+
+            <!-- Elegant progress bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                
+                <!-- Progress text -->
+                <div class="progress-text">
+                    <span>CURATING EXPERIENCE</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+            </div>
+
+            <!-- Bottom decorative line -->
+            <div class="decorative-line"></div>
+        </div>
+    </div>
+
+
+  <button id="sidebar-toggle" class="mobile-only">
+    ☰ <span id="selected-product-name"></span>
+  </button>
+
+  <div id="product-sidebar">
+    <div class="sidebar-header">
+        <button id="close-sidebar">&times;</button>
+        <h2 id="product-title"></h2>
+    </div>
+    <div id="product-content">
+        <div id="product-image"></div>
+        <div id="product-description"></div>
+        <div class="product-meta">
+            <input type="email" id="customer-email" placeholder="your@email.com" required>
+            <div id="product-attributes"></div> 
+            <span id="product-price"></span>
+            <button id="add-to-cart">Add to Cart</button>
+            <button id="checkout-button">
+                Proceed to Checkout (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </div>
+  </div>
+  </div> 
+  </div>
+
+    <div id="text-container">
+        <h1>Welcome to My 3D Scene</h1>
+        <p style="padding-left: 20px;">Click on a painting to view details.</p>
+    </div>
+    <canvas id="background"></canvas>
+    <script type="module" src="/public/src/main.js"></script>
+</body>
+</html>
